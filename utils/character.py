@@ -1,11 +1,7 @@
-from characterai import PyCAI
-from config import CONFIG
-
-client = PyCAI(CONFIG.characterai_token.get_secret_value())
-client.start()
+from main import client
 
 
-class Character():
+class Character:
     _instances = {}
 
     def __init__(self, user_id):
@@ -17,7 +13,7 @@ class Character():
             cls._instances[kwargs["user_id"]].__init__(*args, **kwargs)
         return cls._instances[kwargs["user_id"]]
 
-    async def reply_to_bot(self, text):
+    def reply_to_bot(self, text):
         participants = self.chat['participants']
 
         if not participants[0]['is_human']:

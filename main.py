@@ -3,9 +3,14 @@ from aiogram import Bot, Dispatcher
 from config import CONFIG
 from handlers import base, chatting
 from utils.commands import set_commands
+import nest_asyncio
+from characterai import PyCAI
 
 
+nest_asyncio.apply()
 bot = Bot(token=CONFIG.bot_token.get_secret_value())
+client = PyCAI(CONFIG.characterai_token.get_secret_value())
+client.start()
 
 
 async def main():
@@ -20,4 +25,5 @@ async def main():
 
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(main())
