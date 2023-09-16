@@ -1,7 +1,7 @@
 import asyncio
 from aiogram import Bot, Dispatcher
 from config import CONFIG
-from handlers import base
+from handlers import base, chatting
 from utils.commands import set_commands
 
 
@@ -12,6 +12,7 @@ async def main():
     dp = Dispatcher()
 
     dp.include_routers(base.router,
+                       chatting.router,
                        )
 
     await set_commands(bot)
