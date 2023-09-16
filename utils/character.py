@@ -5,7 +5,7 @@ class Character:
     _instances = {}
 
     def __init__(self, user_id):
-        self.chat = await client.chat.new_chat(
+        self.chat = client.chat.new_chat(
             char="rFKvc0ejXz_X4w7hXDhrDjtkve0GTf-cuetnkImRCDQ")
 
     def __call__(cls, *args, **kwargs):
