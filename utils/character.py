@@ -5,7 +5,8 @@ class Character:
     _instances = {}
 
     def __init__(self, user_id):
-        self.chat = client.chat.new_chat(char="rFKvc0ejXz_X4w7hXDhrDjtkve0GTf-cuetnkImRCDQ")
+        self.chat = await client.chat.new_chat(
+            char="rFKvc0ejXz_X4w7hXDhrDjtkve0GTf-cuetnkImRCDQ")
 
     def __call__(cls, *args, **kwargs):
         if kwargs["user_id"] not in cls._instances:
@@ -13,7 +14,7 @@ class Character:
             cls._instances[kwargs["user_id"]].__init__(*args, **kwargs)
         return cls._instances[kwargs["user_id"]]
 
-    def reply_to_bot(self, text):
+    async def reply_to_bot(self, text):
         participants = self.chat['participants']
 
         if not participants[0]['is_human']:
@@ -21,7 +22,7 @@ class Character:
         else:
             tgt = participants[1]['user']['username']
 
-        data = client.chat.send_message(
+        data = await client.chat.send_message(
                 self.chat['external_id'], tgt, text
             )
 
