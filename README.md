@@ -2,7 +2,7 @@
  CharacterAI telegram chatbot. Made using Aiogram 3.
 
 
-[<img src="https://img.shields.io/badge/Telegram-%40None-blue">](https://t.me/)
+[<img src="https://img.shields.io/badge/Telegram-%40character__chat__bot-blue">](https://t.me/character_chat_bot)
 [![wakatime](https://wakatime.com/badge/user/4d0cc4aa-e1c1-483b-8c80-199c9ea5d0c5/project/48718457-e1e9-4031-9742-4ddb44895d9d.svg)](https://wakatime.com/badge/user/4d0cc4aa-e1c1-483b-8c80-199c9ea5d0c5/project/48718457-e1e9-4031-9742-4ddb44895d9d)
 
 ![Aiogram](https://img.shields.io/badge/aiogram-14354C?style=for-the-badge&logo=python&logoColor=white)
