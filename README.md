@@ -3,7 +3,7 @@
 
 
 [<img src="https://img.shields.io/badge/Telegram-%40None-blue">](https://t.me/)
-[![wakatime]()]()
+[![wakatime](https://wakatime.com/badge/user/4d0cc4aa-e1c1-483b-8c80-199c9ea5d0c5/project/48718457-e1e9-4031-9742-4ddb44895d9d.svg)](https://wakatime.com/badge/user/4d0cc4aa-e1c1-483b-8c80-199c9ea5d0c5/project/48718457-e1e9-4031-9742-4ddb44895d9d)
 
 ![Aiogram](https://img.shields.io/badge/aiogram-14354C?style=for-the-badge&logo=python&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -28,13 +28,17 @@ Clone the repository and install all dependencies by:
 ```bash
 pip install -r requirements.txt
 ```
-
+Fill .env variables and start bot:
 ```bash
 python main.py
 ```
 
 ### Systemd
-Work-in-progress
+Replace '.example' from characterai-bot.service.example so it's just characterai-bot.service.
+Then just copy service file to /etc/systemd/system/
+```bash
+sudo systemctl start characterai-bot.service
+```
 
 
 ## TODO

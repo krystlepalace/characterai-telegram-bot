@@ -1,0 +1,14 @@
+[Unit]
+ Description=Telegram CharacterAI Bot
+ After=network.target
+
+ [Service]
+ Type=simple
+ WorkingDirectory=REPOSITORY DIRECTORY
+ ExecStart=YOUR VENV DIRECTORY/bin/python REPOSITORY DIRECTORY/main.py
+ KillMode=process
+ Restart=always
+ RestartSec=10
+
+ [Install]
+ WantedBy=multi-user.target
