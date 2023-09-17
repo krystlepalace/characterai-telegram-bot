@@ -27,12 +27,34 @@ def characters_builder(page=0):
 
     builder.button(
         text="<",
-        callback_data=PaginationCallback(page=page-1).pack()
+        callback_data=PaginationCallback(page=page-1, type="characters").pack()
     )
     builder.button(
         text=">",
-        callback_data=PaginationCallback(page=page+1).pack()
+        callback_data=PaginationCallback(page=page+1, type="characters").pack()
     )
     builder.adjust(*[1 for i in range(len(characters[page]))], 2)
+
+    return builder
+
+
+def search_results(results, page=0):
+    builder = InlineKeyboardBuilder()
+    paginated_results = [results[i:i + 5] for i in range(0, len(results), 5)]
+    for char in paginated_results[page]:
+        builder.button(
+            text=char['participant__name'],
+            callback_data=CharacterCallback(id=char["external_id"]).pack()
+        )
+
+    builder.button(
+        text="<",
+        callback_data=PaginationCallback(page=page-1, type="search").pack()
+    )
+    builder.button(
+        text=">",
+        callback_data=PaginationCallback(page=page+1, type="search").pack()
+    )
+    builder.adjust(*[1 for i in range(len(paginated_results[page]))], 2)
 
     return builder
