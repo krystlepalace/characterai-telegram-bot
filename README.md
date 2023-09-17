@@ -52,5 +52,4 @@ sudo systemctl start characterai-bot.service
 
 
 ## TODO
-1. Basic functionality
-2. Some help about using unofficial CharacterAI API 
+1. Searching characters with /search
