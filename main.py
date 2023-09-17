@@ -7,7 +7,7 @@ from characterai import PyAsyncCAI
 
 
 bot = Bot(token=CONFIG.bot_token.get_secret_value())
-client = PyAsyncCAI(CONFIG.characterai_token.get_secret_value())
+client = PyAsyncCAI(token=CONFIG.characterai_token.get_secret_value())
 
 
 async def main():
@@ -17,9 +17,9 @@ async def main():
                        chatting.router,
                        )
 
+    await client.start()
     await set_commands(bot)
     await dp.start_polling(bot)
-    await client.start()
 
 
 if __name__ == "__main__":
