@@ -17,6 +17,6 @@ async def start_command(message: Message):
 async def help_command(message: Message):
     await message.answer("Help message.\n\n"
                          "/start - greeting message\n"
-                         "/help - this message"
+                         "/help - this message\n"
                          "/character - choose character for dialog\n\n"
                          "Author - @krystlepalace")
