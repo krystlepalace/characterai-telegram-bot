@@ -1,7 +1,6 @@
 from aiogram import Router, F
-from aiogram.types import Message, CallbackQuery
+from aiogram.types import Message
 from aiogram.filters import Command
-
 from keyboards.choose_character import characters_builder
 from utils.character import Character
 
@@ -25,13 +24,3 @@ async def char_reply(message: Message):
     result = await char.reply_to_bot(message.text)
 
     await message.reply(text=result)
-
-
-@router.callback_query()
-async def process_choose_character(callback: CallbackQuery):
-    char = Character(user_id=callback.from_user.id)
-    await char.change_char(callback.data)
-
-    await callback.message.edit_text("You have choosed character.\n"
-                                     "Dialog started")
-    await callback.answer()
