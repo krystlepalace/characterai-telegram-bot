@@ -15,7 +15,11 @@ async def set_commands(bot: Bot):
             BotCommand(
                 command="character",
                 description="Menu with characters"
-            )
+            ),
+            BotCommand(
+                command="search",
+                description="<query> - search characters"
+            ),
             ]
 
     await bot.set_my_commands(default_commands, BotCommandScopeDefault())
