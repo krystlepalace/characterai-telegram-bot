@@ -7,3 +7,4 @@ class CharacterCallback(CallbackData, prefix='char'):
 
 class PaginationCallback(CallbackData, prefix='page'):
     page: int
+    type: str
