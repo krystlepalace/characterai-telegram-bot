@@ -12,7 +12,7 @@
  1. <a href="#install">Install</a>
   * <a href="#prequisites">Prequisites</a> 
   * <a href="#basic-startup">Basic startup</a>
-  * <a href="#adding-characters>Adding characters to bot</a>
+  * <a href="#adding-characters">Adding characters to bot</a>
   * <a href="#systemd">Systemd</a>
  2. <a href="#todo">TODO</a>
 
