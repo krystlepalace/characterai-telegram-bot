@@ -12,6 +12,10 @@ async def set_commands(bot: Bot):
                 command="help",
                 description="Command for help and command list of the bot"
                 ),
+            BotCommand(
+                command="character",
+                description="Menu with characters"
+            )
             ]
 
     await bot.set_my_commands(default_commands, BotCommandScopeDefault())
