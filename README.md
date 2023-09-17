@@ -21,14 +21,18 @@
 ### Prequisites
 1. Python 3.11 or higher
 2. Systemd (if you want to run bot as service)
-3. Genius client access token
+3. character.ai token
 
 ### Basic startup
 Clone the repository and install all dependencies by:
 ```bash
 pip install -r requirements.txt
 ```
-Fill .env variables and start bot:
+Acessing API:
+    1. Login into character.ai and open DevTools in your browser (F12).
+    2. Go to Storage -> Local Storage -> char_token, copy value and paste it into .env CHARACTERAI_TOKEN.
+
+Also paste your telegram bot token form @BotFather into .env and start bot:
 ```bash
 python main.py
 ```
