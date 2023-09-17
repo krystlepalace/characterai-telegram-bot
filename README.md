@@ -29,8 +29,8 @@ Clone the repository and install all dependencies by:
 pip install -r requirements.txt
 ```
 Acessing API:
-    1. Login into character.ai and open DevTools in your browser (F12).
-    2. Go to Storage -> Local Storage -> char_token, copy value and paste it into .env CHARACTERAI_TOKEN.
+1. Login into character.ai and open DevTools in your browser (F12).
+2. Go to Storage -> Local Storage -> char_token, copy value and paste it into .env CHARACTERAI_TOKEN.
 
 Also paste your telegram bot token form @BotFather into .env and start bot:
 ```bash
