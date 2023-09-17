@@ -52,4 +52,4 @@ sudo systemctl start characterai-bot.service
 
 
 ## TODO
-1. Searching characters with /search
+1. Creating your own characters from bot
