@@ -12,6 +12,7 @@
  1. <a href="#install">Install</a>
   * <a href="#prequisites">Prequisites</a> 
   * <a href="#basic-startup">Basic startup</a>
+  * <a href="#adding-characters>Adding characters to bot</a>
   * <a href="#systemd">Systemd</a>
  2. <a href="#todo">TODO</a>
 
@@ -36,6 +37,11 @@ Also paste your telegram bot token form @BotFather into .env and start bot:
 ```bash
 python main.py
 ```
+
+### Adding characters
+If you want to add some characters to the /characters menu, you need to get name and id and paste into keyboards.choose_character.characters.
+To get id simply copy it form link:
+<img source="https://450793928-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FlU2oCgIGdxANM94UL528%2Fuploads%2Fk9H5wKICdt3VMAmThulr%2Fimage_2023-06-08_12-52-52.png?alt=media&token=f0da7a88-11bd-4f2a-bb06-a7cb10f3ff61"/>
 
 ### Systemd
 Replace '.example' from characterai-bot.service.example so it's just characterai-bot.service.
