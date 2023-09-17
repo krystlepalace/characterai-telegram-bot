@@ -2,6 +2,7 @@ import asyncio
 from aiogram import Bot, Dispatcher
 from config import CONFIG
 from handlers import base, chatting
+from handlers.callbacks import char_menu_callback
 from utils.commands import set_commands
 from characterai import PyAsyncCAI
 
@@ -15,6 +16,7 @@ async def main():
 
     dp.include_routers(base.router,
                        chatting.router,
+                       char_menu_callback.router,
                        )
 
     await client.start()
