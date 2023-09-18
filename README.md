@@ -14,7 +14,6 @@
   * <a href="#basic-startup">Basic startup</a>
   * <a href="#adding-characters">Adding characters to bot</a>
   * <a href="#systemd">Systemd</a>
- 2. <a href="#todo">TODO</a>
 
 
 ## Install
@@ -50,6 +49,3 @@ Then just copy service file to /etc/systemd/system/
 sudo systemctl start characterai-bot.service
 ```
 
-
-## TODO
-1. Creating your own characters from bot
